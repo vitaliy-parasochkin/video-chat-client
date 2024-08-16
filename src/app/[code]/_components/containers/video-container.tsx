@@ -32,7 +32,7 @@ function VideoContainer({children, muted, visible, image, name, stream}: VideoCo
   return (
     <div
       className={cn('relative h-full rounded-xl overflow-hidden border border-transparent', {
-        'border-blue-500': [speaking],
+        'border-blue-500': speaking,
       })}
     >
       <div className={cn('h-full', {hidden: !visible})}>{children}</div>

@@ -22,19 +22,19 @@ function Meeting() {
     <>
       <StreamsContainer count={Object.keys(streamsList).length + 1}>
         <Stream />
+        {Object.entries(streamsList).map(([peerId, stream]) => (
+          <VideoContainer
+            key={peerId}
+            muted={mutedList[peerId]}
+            visible={visibleList[peerId]}
+            image={imagesList[peerId]}
+            name={namesList[peerId]}
+            stream={stream}
+          >
+            <PeerVideo stream={stream} />
+          </VideoContainer>
+        ))}
       </StreamsContainer>
-      {Object.entries(streamsList).map(([peerId, stream]) => (
-        <VideoContainer
-          key={peerId}
-          muted={mutedList[peerId]}
-          visible={visibleList[peerId]}
-          image={imagesList[peerId]}
-          name={namesList[peerId]}
-          stream={stream}
-        >
-          <PeerVideo stream={stream} />
-        </VideoContainer>
-      ))}
       <JoinRequestDialog />
     </>
   );
