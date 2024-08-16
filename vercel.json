@@ -1,6 +1,6 @@
 {
   "functions": {
-    "src/api/*.ts": {
+    "api/auth/[...next-auth]/route.ts": {
       "maxDuration": 50
     }
   }
