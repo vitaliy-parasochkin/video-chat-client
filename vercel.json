@@ -1,6 +1,6 @@
 {
   "functions": {
-    "auth.ts": {
+    "src/app/**/**/*.ts": {
       "maxDuration": 50
     }
   }
