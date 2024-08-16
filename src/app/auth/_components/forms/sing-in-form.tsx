@@ -85,7 +85,7 @@ export default function SignInForm() {
           </div>
         )}
         <Separator className="my-5" />
-        <div className="space-y-2">
+        <div className="flex flex-col gap-2">
           <GoogleButton callbackUrl={callbackURL} />
           <GithubButton callbackUrl={callbackURL} />
         </div>
