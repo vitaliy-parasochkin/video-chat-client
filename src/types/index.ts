@@ -41,7 +41,7 @@ export interface ClientToServerEvents {
 }
 export interface ServerToClientEvents {
   'meeting:full': () => void;
-  'user:accepted': ({}: {code: Code; user: PeerUser}) => void;
+  'user:accepted': ({}: {code: Code; user: PeerUserWithSocketId}) => void;
   'user:rejected': ({}: {code: Code; user: PeerUser}) => void;
   'user:wait-for-owner': () => void;
   'user:join-request': (user: PeerUserWithSocketId) => void;

@@ -94,7 +94,6 @@ function MeetingProvider({children, joinMeeting}: Props) {
       addJoinRequest(user);
     });
     socket.on('user:accepted', ({code, user}) => {
-      // @ts-ignore
       socket.emit('meeting:join', {code, user});
       setJoinStatus('accepted');
       joinMeeting();
@@ -171,23 +170,19 @@ function MeetingProvider({children, joinMeeting}: Props) {
   }, [myPeerId, namesList, socket, removeConnection]);
 
   useEffect(() => {
-    // @ts-ignore
-    socket.on('user:toggled-video', (peerId: PeerId) => {
+    socket.on('user:toggle-video', (peerId: PeerId) => {
       setPeerVisible(peerId, !visibleList[peerId]);
     });
     return () => {
-      // @ts-ignore
-      socket.off('user:toggled-video');
+      socket.off('user:toggle-video');
     };
   }, [visibleList, setPeerVisible, socket]);
   useEffect(() => {
-    // @ts-ignore
-    socket.on('user:toggled-audio', (peerId: PeerId) => {
+    socket.on('user:toggle-audio', (peerId: PeerId) => {
       setPeerMuted(peerId, !mutedList[peerId]);
     });
     return () => {
-      // @ts-ignore
-      socket.off('user:toggled-audio');
+      socket.off('user:toggle-audio');
     };
   }, [mutedList, socket, setPeerMuted]);
 
