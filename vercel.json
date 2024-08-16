@@ -2,7 +2,7 @@
   "functions": {
     "src/app/**/**/*.ts": {
       "maxDuration": 60,
-      "memory": 3000
+      "memory": 1024
     }
   }
 }
