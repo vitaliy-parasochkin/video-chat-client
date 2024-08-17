@@ -1,6 +1,6 @@
 ## This is the client-side repository for the pet project "video-chat"
 
-#### You can open the site by [link]([https://github.com/vitaliy-parasochkin/video-chat-server](https://video-chat-by-pv.vercel.app/)) 
+#### You can open the site by [link](https://video-chat-by-pv.vercel.app/)
 
 ### Technologies and functionality:
 - 🌐 Video chat development using NextJS 14 and Typescript.
